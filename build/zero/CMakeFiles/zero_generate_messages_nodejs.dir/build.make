@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/robot/rosLearn/build
 include zero/CMakeFiles/zero_generate_messages_nodejs.dir/progress.make
 
 zero/CMakeFiles/zero_generate_messages_nodejs: /home/robot/rosLearn/devel/share/gennodejs/ros/zero/msg/location.js
+zero/CMakeFiles/zero_generate_messages_nodejs: /home/robot/rosLearn/devel/share/gennodejs/ros/zero/srv/height.js
 
 
 /home/robot/rosLearn/devel/share/gennodejs/ros/zero/msg/location.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
@@ -61,8 +62,14 @@ zero/CMakeFiles/zero_generate_messages_nodejs: /home/robot/rosLearn/devel/share/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/rosLearn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from zero/location.msg"
 	cd /home/robot/rosLearn/build/zero && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/robot/rosLearn/src/zero/msg/location.msg -Izero:/home/robot/rosLearn/src/zero/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p zero -o /home/robot/rosLearn/devel/share/gennodejs/ros/zero/msg
 
+/home/robot/rosLearn/devel/share/gennodejs/ros/zero/srv/height.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/robot/rosLearn/devel/share/gennodejs/ros/zero/srv/height.js: /home/robot/rosLearn/src/zero/srv/height.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/rosLearn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from zero/height.srv"
+	cd /home/robot/rosLearn/build/zero && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/robot/rosLearn/src/zero/srv/height.srv -Izero:/home/robot/rosLearn/src/zero/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p zero -o /home/robot/rosLearn/devel/share/gennodejs/ros/zero/srv
+
 zero_generate_messages_nodejs: zero/CMakeFiles/zero_generate_messages_nodejs
 zero_generate_messages_nodejs: /home/robot/rosLearn/devel/share/gennodejs/ros/zero/msg/location.js
+zero_generate_messages_nodejs: /home/robot/rosLearn/devel/share/gennodejs/ros/zero/srv/height.js
 zero_generate_messages_nodejs: zero/CMakeFiles/zero_generate_messages_nodejs.dir/build.make
 
 .PHONY : zero_generate_messages_nodejs

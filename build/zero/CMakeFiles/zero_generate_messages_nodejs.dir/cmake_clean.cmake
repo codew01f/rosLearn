@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "/home/robot/rosLearn/devel/share/gennodejs/ros/zero/msg/location.js"
+  "/home/robot/rosLearn/devel/share/gennodejs/ros/zero/srv/height.js"
   "CMakeFiles/zero_generate_messages_nodejs"
 )
 

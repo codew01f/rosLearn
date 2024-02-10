@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "/home/robot/rosLearn/devel/share/common-lisp/ros/zero/msg/location.lisp"
+  "/home/robot/rosLearn/devel/share/common-lisp/ros/zero/srv/height.lisp"
   "CMakeFiles/zero_generate_messages_lisp"
 )
 

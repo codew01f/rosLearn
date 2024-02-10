@@ -54,7 +54,9 @@ CMAKE_BINARY_DIR = /home/robot/rosLearn/build
 include zero/CMakeFiles/zero_generate_messages_py.dir/progress.make
 
 zero/CMakeFiles/zero_generate_messages_py: /home/robot/rosLearn/devel/lib/python3/dist-packages/zero/msg/_location.py
+zero/CMakeFiles/zero_generate_messages_py: /home/robot/rosLearn/devel/lib/python3/dist-packages/zero/srv/_height.py
 zero/CMakeFiles/zero_generate_messages_py: /home/robot/rosLearn/devel/lib/python3/dist-packages/zero/msg/__init__.py
+zero/CMakeFiles/zero_generate_messages_py: /home/robot/rosLearn/devel/lib/python3/dist-packages/zero/srv/__init__.py
 
 
 /home/robot/rosLearn/devel/lib/python3/dist-packages/zero/msg/_location.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
@@ -62,14 +64,28 @@ zero/CMakeFiles/zero_generate_messages_py: /home/robot/rosLearn/devel/lib/python
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/rosLearn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG zero/location"
 	cd /home/robot/rosLearn/build/zero && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/robot/rosLearn/src/zero/msg/location.msg -Izero:/home/robot/rosLearn/src/zero/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p zero -o /home/robot/rosLearn/devel/lib/python3/dist-packages/zero/msg
 
+/home/robot/rosLearn/devel/lib/python3/dist-packages/zero/srv/_height.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
+/home/robot/rosLearn/devel/lib/python3/dist-packages/zero/srv/_height.py: /home/robot/rosLearn/src/zero/srv/height.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/rosLearn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python code from SRV zero/height"
+	cd /home/robot/rosLearn/build/zero && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/robot/rosLearn/src/zero/srv/height.srv -Izero:/home/robot/rosLearn/src/zero/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p zero -o /home/robot/rosLearn/devel/lib/python3/dist-packages/zero/srv
+
 /home/robot/rosLearn/devel/lib/python3/dist-packages/zero/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/robot/rosLearn/devel/lib/python3/dist-packages/zero/msg/__init__.py: /home/robot/rosLearn/devel/lib/python3/dist-packages/zero/msg/_location.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/rosLearn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python msg __init__.py for zero"
+/home/robot/rosLearn/devel/lib/python3/dist-packages/zero/msg/__init__.py: /home/robot/rosLearn/devel/lib/python3/dist-packages/zero/srv/_height.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/rosLearn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python msg __init__.py for zero"
 	cd /home/robot/rosLearn/build/zero && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/robot/rosLearn/devel/lib/python3/dist-packages/zero/msg --initpy
+
+/home/robot/rosLearn/devel/lib/python3/dist-packages/zero/srv/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/robot/rosLearn/devel/lib/python3/dist-packages/zero/srv/__init__.py: /home/robot/rosLearn/devel/lib/python3/dist-packages/zero/msg/_location.py
+/home/robot/rosLearn/devel/lib/python3/dist-packages/zero/srv/__init__.py: /home/robot/rosLearn/devel/lib/python3/dist-packages/zero/srv/_height.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/rosLearn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python srv __init__.py for zero"
+	cd /home/robot/rosLearn/build/zero && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/robot/rosLearn/devel/lib/python3/dist-packages/zero/srv --initpy
 
 zero_generate_messages_py: zero/CMakeFiles/zero_generate_messages_py
 zero_generate_messages_py: /home/robot/rosLearn/devel/lib/python3/dist-packages/zero/msg/_location.py
+zero_generate_messages_py: /home/robot/rosLearn/devel/lib/python3/dist-packages/zero/srv/_height.py
 zero_generate_messages_py: /home/robot/rosLearn/devel/lib/python3/dist-packages/zero/msg/__init__.py
+zero_generate_messages_py: /home/robot/rosLearn/devel/lib/python3/dist-packages/zero/srv/__init__.py
 zero_generate_messages_py: zero/CMakeFiles/zero_generate_messages_py.dir/build.make
 
 .PHONY : zero_generate_messages_py

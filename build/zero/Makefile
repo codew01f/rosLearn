@@ -168,6 +168,36 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+zero/CMakeFiles/node_srv.dir/rule:
+	cd /home/robot/rosLearn/build && $(MAKE) -f CMakeFiles/Makefile2 zero/CMakeFiles/node_srv.dir/rule
+.PHONY : zero/CMakeFiles/node_srv.dir/rule
+
+# Convenience name for target.
+node_srv: zero/CMakeFiles/node_srv.dir/rule
+
+.PHONY : node_srv
+
+# fast build rule for target.
+node_srv/fast:
+	cd /home/robot/rosLearn/build && $(MAKE) -f zero/CMakeFiles/node_srv.dir/build.make zero/CMakeFiles/node_srv.dir/build
+.PHONY : node_srv/fast
+
+# Convenience name for target.
+zero/CMakeFiles/node_sub.dir/rule:
+	cd /home/robot/rosLearn/build && $(MAKE) -f CMakeFiles/Makefile2 zero/CMakeFiles/node_sub.dir/rule
+.PHONY : zero/CMakeFiles/node_sub.dir/rule
+
+# Convenience name for target.
+node_sub: zero/CMakeFiles/node_sub.dir/rule
+
+.PHONY : node_sub
+
+# fast build rule for target.
+node_sub/fast:
+	cd /home/robot/rosLearn/build && $(MAKE) -f zero/CMakeFiles/node_sub.dir/build.make zero/CMakeFiles/node_sub.dir/build
+.PHONY : node_sub/fast
+
+# Convenience name for target.
 zero/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
 	cd /home/robot/rosLearn/build && $(MAKE) -f CMakeFiles/Makefile2 zero/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 .PHONY : zero/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
@@ -393,21 +423,6 @@ roscpp_generate_messages_eus/fast:
 .PHONY : roscpp_generate_messages_eus/fast
 
 # Convenience name for target.
-zero/CMakeFiles/node_sub.dir/rule:
-	cd /home/robot/rosLearn/build && $(MAKE) -f CMakeFiles/Makefile2 zero/CMakeFiles/node_sub.dir/rule
-.PHONY : zero/CMakeFiles/node_sub.dir/rule
-
-# Convenience name for target.
-node_sub: zero/CMakeFiles/node_sub.dir/rule
-
-.PHONY : node_sub
-
-# fast build rule for target.
-node_sub/fast:
-	cd /home/robot/rosLearn/build && $(MAKE) -f zero/CMakeFiles/node_sub.dir/build.make zero/CMakeFiles/node_sub.dir/build
-.PHONY : node_sub/fast
-
-# Convenience name for target.
 zero/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
 	cd /home/robot/rosLearn/build && $(MAKE) -f CMakeFiles/Makefile2 zero/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 .PHONY : zero/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
@@ -421,6 +436,21 @@ roscpp_generate_messages_cpp: zero/CMakeFiles/roscpp_generate_messages_cpp.dir/r
 roscpp_generate_messages_cpp/fast:
 	cd /home/robot/rosLearn/build && $(MAKE) -f zero/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make zero/CMakeFiles/roscpp_generate_messages_cpp.dir/build
 .PHONY : roscpp_generate_messages_cpp/fast
+
+# Convenience name for target.
+zero/CMakeFiles/_zero_generate_messages_check_deps_height.dir/rule:
+	cd /home/robot/rosLearn/build && $(MAKE) -f CMakeFiles/Makefile2 zero/CMakeFiles/_zero_generate_messages_check_deps_height.dir/rule
+.PHONY : zero/CMakeFiles/_zero_generate_messages_check_deps_height.dir/rule
+
+# Convenience name for target.
+_zero_generate_messages_check_deps_height: zero/CMakeFiles/_zero_generate_messages_check_deps_height.dir/rule
+
+.PHONY : _zero_generate_messages_check_deps_height
+
+# fast build rule for target.
+_zero_generate_messages_check_deps_height/fast:
+	cd /home/robot/rosLearn/build && $(MAKE) -f zero/CMakeFiles/_zero_generate_messages_check_deps_height.dir/build.make zero/CMakeFiles/_zero_generate_messages_check_deps_height.dir/build
+.PHONY : _zero_generate_messages_check_deps_height/fast
 
 # Convenience name for target.
 zero/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
@@ -629,6 +659,33 @@ src/node_pub.cpp.s:
 	cd /home/robot/rosLearn/build && $(MAKE) -f zero/CMakeFiles/node_pub.dir/build.make zero/CMakeFiles/node_pub.dir/src/node_pub.cpp.s
 .PHONY : src/node_pub.cpp.s
 
+src/node_srv.o: src/node_srv.cpp.o
+
+.PHONY : src/node_srv.o
+
+# target to build an object file
+src/node_srv.cpp.o:
+	cd /home/robot/rosLearn/build && $(MAKE) -f zero/CMakeFiles/node_srv.dir/build.make zero/CMakeFiles/node_srv.dir/src/node_srv.cpp.o
+.PHONY : src/node_srv.cpp.o
+
+src/node_srv.i: src/node_srv.cpp.i
+
+.PHONY : src/node_srv.i
+
+# target to preprocess a source file
+src/node_srv.cpp.i:
+	cd /home/robot/rosLearn/build && $(MAKE) -f zero/CMakeFiles/node_srv.dir/build.make zero/CMakeFiles/node_srv.dir/src/node_srv.cpp.i
+.PHONY : src/node_srv.cpp.i
+
+src/node_srv.s: src/node_srv.cpp.s
+
+.PHONY : src/node_srv.s
+
+# target to generate assembly for a file
+src/node_srv.cpp.s:
+	cd /home/robot/rosLearn/build && $(MAKE) -f zero/CMakeFiles/node_srv.dir/build.make zero/CMakeFiles/node_srv.dir/src/node_srv.cpp.s
+.PHONY : src/node_srv.cpp.s
+
 src/node_sub.o: src/node_sub.cpp.o
 
 .PHONY : src/node_sub.o
@@ -665,6 +722,8 @@ help:
 	@echo "... install/strip"
 	@echo "... install"
 	@echo "... edit_cache"
+	@echo "... node_srv"
+	@echo "... node_sub"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
@@ -682,8 +741,8 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... zero_generate_messages_eus"
 	@echo "... roscpp_generate_messages_eus"
-	@echo "... node_sub"
 	@echo "... roscpp_generate_messages_cpp"
+	@echo "... _zero_generate_messages_check_deps_height"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... zero_genpy"
 	@echo "... std_msgs_generate_messages_py"
@@ -701,6 +760,9 @@ help:
 	@echo "... src/node_pub.o"
 	@echo "... src/node_pub.i"
 	@echo "... src/node_pub.s"
+	@echo "... src/node_srv.o"
+	@echo "... src/node_srv.i"
+	@echo "... src/node_srv.s"
 	@echo "... src/node_sub.o"
 	@echo "... src/node_sub.i"
 	@echo "... src/node_sub.s"

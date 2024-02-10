@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "/home/robot/rosLearn/devel/include/zero/height.h"
   "/home/robot/rosLearn/devel/include/zero/location.h"
   "CMakeFiles/zero_generate_messages_cpp"
 )

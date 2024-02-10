@@ -1,7 +1,7 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
 messages_str = "/home/robot/rosLearn/src/zero/msg/location.msg"
-services_str = ""
+services_str = "/home/robot/rosLearn/src/zero/srv/height.srv"
 pkg_name = "zero"
 dependencies_str = "std_msgs"
 langs = "gencpp;geneus;genlisp;gennodejs;genpy"

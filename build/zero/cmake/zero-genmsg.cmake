@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "zero: 1 messages, 0 services")
+message(STATUS "zero: 1 messages, 1 services")
 
 set(MSG_I_FLAGS "-Izero:/home/robot/rosLearn/src/zero/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
 
@@ -22,6 +22,11 @@ add_custom_target(_zero_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "zero" "/home/robot/rosLearn/src/zero/msg/location.msg" ""
 )
 
+get_filename_component(_filename "/home/robot/rosLearn/src/zero/srv/height.srv" NAME_WE)
+add_custom_target(_zero_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "zero" "/home/robot/rosLearn/src/zero/srv/height.srv" ""
+)
+
 #
 #  langs = gencpp;geneus;genlisp;gennodejs;genpy
 #
@@ -36,6 +41,12 @@ _generate_msg_cpp(zero
 )
 
 ### Generating Services
+_generate_srv_cpp(zero
+  "/home/robot/rosLearn/src/zero/srv/height.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/zero
+)
 
 ### Generating Module File
 _generate_module_cpp(zero
@@ -50,6 +61,8 @@ add_dependencies(zero_generate_messages zero_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/robot/rosLearn/src/zero/msg/location.msg" NAME_WE)
+add_dependencies(zero_generate_messages_cpp _zero_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/rosLearn/src/zero/srv/height.srv" NAME_WE)
 add_dependencies(zero_generate_messages_cpp _zero_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -69,6 +82,12 @@ _generate_msg_eus(zero
 )
 
 ### Generating Services
+_generate_srv_eus(zero
+  "/home/robot/rosLearn/src/zero/srv/height.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/zero
+)
 
 ### Generating Module File
 _generate_module_eus(zero
@@ -83,6 +102,8 @@ add_dependencies(zero_generate_messages zero_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/robot/rosLearn/src/zero/msg/location.msg" NAME_WE)
+add_dependencies(zero_generate_messages_eus _zero_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/rosLearn/src/zero/srv/height.srv" NAME_WE)
 add_dependencies(zero_generate_messages_eus _zero_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -102,6 +123,12 @@ _generate_msg_lisp(zero
 )
 
 ### Generating Services
+_generate_srv_lisp(zero
+  "/home/robot/rosLearn/src/zero/srv/height.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/zero
+)
 
 ### Generating Module File
 _generate_module_lisp(zero
@@ -116,6 +143,8 @@ add_dependencies(zero_generate_messages zero_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/robot/rosLearn/src/zero/msg/location.msg" NAME_WE)
+add_dependencies(zero_generate_messages_lisp _zero_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/rosLearn/src/zero/srv/height.srv" NAME_WE)
 add_dependencies(zero_generate_messages_lisp _zero_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -135,6 +164,12 @@ _generate_msg_nodejs(zero
 )
 
 ### Generating Services
+_generate_srv_nodejs(zero
+  "/home/robot/rosLearn/src/zero/srv/height.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/zero
+)
 
 ### Generating Module File
 _generate_module_nodejs(zero
@@ -149,6 +184,8 @@ add_dependencies(zero_generate_messages zero_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/robot/rosLearn/src/zero/msg/location.msg" NAME_WE)
+add_dependencies(zero_generate_messages_nodejs _zero_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/rosLearn/src/zero/srv/height.srv" NAME_WE)
 add_dependencies(zero_generate_messages_nodejs _zero_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -168,6 +205,12 @@ _generate_msg_py(zero
 )
 
 ### Generating Services
+_generate_srv_py(zero
+  "/home/robot/rosLearn/src/zero/srv/height.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/zero
+)
 
 ### Generating Module File
 _generate_module_py(zero
@@ -182,6 +225,8 @@ add_dependencies(zero_generate_messages zero_generate_messages_py)
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/robot/rosLearn/src/zero/msg/location.msg" NAME_WE)
+add_dependencies(zero_generate_messages_py _zero_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot/rosLearn/src/zero/srv/height.srv" NAME_WE)
 add_dependencies(zero_generate_messages_py _zero_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
