@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+zero/CMakeFiles/node_cln.dir/rule:
+	cd /home/robot/rosLearn/build && $(MAKE) -f CMakeFiles/Makefile2 zero/CMakeFiles/node_cln.dir/rule
+.PHONY : zero/CMakeFiles/node_cln.dir/rule
+
+# Convenience name for target.
+node_cln: zero/CMakeFiles/node_cln.dir/rule
+
+.PHONY : node_cln
+
+# fast build rule for target.
+node_cln/fast:
+	cd /home/robot/rosLearn/build && $(MAKE) -f zero/CMakeFiles/node_cln.dir/build.make zero/CMakeFiles/node_cln.dir/build
+.PHONY : node_cln/fast
+
+# Convenience name for target.
 zero/CMakeFiles/node_srv.dir/rule:
 	cd /home/robot/rosLearn/build && $(MAKE) -f CMakeFiles/Makefile2 zero/CMakeFiles/node_srv.dir/rule
 .PHONY : zero/CMakeFiles/node_srv.dir/rule
@@ -632,6 +647,33 @@ node_pub/fast:
 	cd /home/robot/rosLearn/build && $(MAKE) -f zero/CMakeFiles/node_pub.dir/build.make zero/CMakeFiles/node_pub.dir/build
 .PHONY : node_pub/fast
 
+src/node_cln.o: src/node_cln.cpp.o
+
+.PHONY : src/node_cln.o
+
+# target to build an object file
+src/node_cln.cpp.o:
+	cd /home/robot/rosLearn/build && $(MAKE) -f zero/CMakeFiles/node_cln.dir/build.make zero/CMakeFiles/node_cln.dir/src/node_cln.cpp.o
+.PHONY : src/node_cln.cpp.o
+
+src/node_cln.i: src/node_cln.cpp.i
+
+.PHONY : src/node_cln.i
+
+# target to preprocess a source file
+src/node_cln.cpp.i:
+	cd /home/robot/rosLearn/build && $(MAKE) -f zero/CMakeFiles/node_cln.dir/build.make zero/CMakeFiles/node_cln.dir/src/node_cln.cpp.i
+.PHONY : src/node_cln.cpp.i
+
+src/node_cln.s: src/node_cln.cpp.s
+
+.PHONY : src/node_cln.s
+
+# target to generate assembly for a file
+src/node_cln.cpp.s:
+	cd /home/robot/rosLearn/build && $(MAKE) -f zero/CMakeFiles/node_cln.dir/build.make zero/CMakeFiles/node_cln.dir/src/node_cln.cpp.s
+.PHONY : src/node_cln.cpp.s
+
 src/node_pub.o: src/node_pub.cpp.o
 
 .PHONY : src/node_pub.o
@@ -722,6 +764,7 @@ help:
 	@echo "... install/strip"
 	@echo "... install"
 	@echo "... edit_cache"
+	@echo "... node_cln"
 	@echo "... node_srv"
 	@echo "... node_sub"
 	@echo "... rosgraph_msgs_generate_messages_py"
@@ -757,6 +800,9 @@ help:
 	@echo "... zero_genlisp"
 	@echo "... zero_generate_messages_py"
 	@echo "... node_pub"
+	@echo "... src/node_cln.o"
+	@echo "... src/node_cln.i"
+	@echo "... src/node_cln.s"
 	@echo "... src/node_pub.o"
 	@echo "... src/node_pub.i"
 	@echo "... src/node_pub.s"

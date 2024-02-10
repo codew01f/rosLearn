@@ -136,6 +136,7 @@ gtest/googletest/clean: gtest/googletest/CMakeFiles/gtest.dir/clean
 # Directory level rules for directory zero
 
 # Recursive "all" directory target.
+zero/all: zero/CMakeFiles/node_cln.dir/all
 zero/all: zero/CMakeFiles/node_srv.dir/all
 zero/all: zero/CMakeFiles/node_sub.dir/all
 zero/all: zero/CMakeFiles/zero_generate_messages.dir/all
@@ -149,6 +150,7 @@ zero/preinstall:
 .PHONY : zero/preinstall
 
 # Recursive "clean" directory target.
+zero/clean: zero/CMakeFiles/node_cln.dir/clean
 zero/clean: zero/CMakeFiles/node_srv.dir/clean
 zero/clean: zero/CMakeFiles/node_sub.dir/clean
 zero/clean: zero/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
@@ -428,6 +430,47 @@ gtest/googletest/CMakeFiles/gtest.dir/clean:
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/clean
 
 #=============================================================================
+# Target rules for target zero/CMakeFiles/node_cln.dir
+
+# All Build rule for target.
+zero/CMakeFiles/node_cln.dir/all: zero/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+zero/CMakeFiles/node_cln.dir/all: zero/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+zero/CMakeFiles/node_cln.dir/all: zero/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+zero/CMakeFiles/node_cln.dir/all: zero/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+zero/CMakeFiles/node_cln.dir/all: zero/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+zero/CMakeFiles/node_cln.dir/all: zero/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+zero/CMakeFiles/node_cln.dir/all: zero/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+zero/CMakeFiles/node_cln.dir/all: zero/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+zero/CMakeFiles/node_cln.dir/all: zero/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+zero/CMakeFiles/node_cln.dir/all: zero/CMakeFiles/roscpp_generate_messages_eus.dir/all
+zero/CMakeFiles/node_cln.dir/all: zero/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+zero/CMakeFiles/node_cln.dir/all: zero/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+zero/CMakeFiles/node_cln.dir/all: zero/CMakeFiles/std_msgs_generate_messages_py.dir/all
+zero/CMakeFiles/node_cln.dir/all: zero/CMakeFiles/roscpp_generate_messages_py.dir/all
+zero/CMakeFiles/node_cln.dir/all: zero/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+	$(MAKE) -f zero/CMakeFiles/node_cln.dir/build.make zero/CMakeFiles/node_cln.dir/depend
+	$(MAKE) -f zero/CMakeFiles/node_cln.dir/build.make zero/CMakeFiles/node_cln.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/rosLearn/build/CMakeFiles --progress-num=9,10 "Built target node_cln"
+.PHONY : zero/CMakeFiles/node_cln.dir/all
+
+# Build rule for subdir invocation for target.
+zero/CMakeFiles/node_cln.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/rosLearn/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 zero/CMakeFiles/node_cln.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/rosLearn/build/CMakeFiles 0
+.PHONY : zero/CMakeFiles/node_cln.dir/rule
+
+# Convenience name for target.
+node_cln: zero/CMakeFiles/node_cln.dir/rule
+
+.PHONY : node_cln
+
+# clean rule for target.
+zero/CMakeFiles/node_cln.dir/clean:
+	$(MAKE) -f zero/CMakeFiles/node_cln.dir/build.make zero/CMakeFiles/node_cln.dir/clean
+.PHONY : zero/CMakeFiles/node_cln.dir/clean
+
+#=============================================================================
 # Target rules for target zero/CMakeFiles/node_srv.dir
 
 # All Build rule for target.
@@ -448,7 +491,7 @@ zero/CMakeFiles/node_srv.dir/all: zero/CMakeFiles/roscpp_generate_messages_py.di
 zero/CMakeFiles/node_srv.dir/all: zero/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
 	$(MAKE) -f zero/CMakeFiles/node_srv.dir/build.make zero/CMakeFiles/node_srv.dir/depend
 	$(MAKE) -f zero/CMakeFiles/node_srv.dir/build.make zero/CMakeFiles/node_srv.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/rosLearn/build/CMakeFiles --progress-num=11,12 "Built target node_srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/rosLearn/build/CMakeFiles --progress-num=13,14 "Built target node_srv"
 .PHONY : zero/CMakeFiles/node_srv.dir/all
 
 # Build rule for subdir invocation for target.
@@ -489,7 +532,7 @@ zero/CMakeFiles/node_sub.dir/all: zero/CMakeFiles/roscpp_generate_messages_py.di
 zero/CMakeFiles/node_sub.dir/all: zero/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
 	$(MAKE) -f zero/CMakeFiles/node_sub.dir/build.make zero/CMakeFiles/node_sub.dir/depend
 	$(MAKE) -f zero/CMakeFiles/node_sub.dir/build.make zero/CMakeFiles/node_sub.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/rosLearn/build/CMakeFiles --progress-num=13,14 "Built target node_sub"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/rosLearn/build/CMakeFiles --progress-num=15,16 "Built target node_sub"
 .PHONY : zero/CMakeFiles/node_sub.dir/all
 
 # Build rule for subdir invocation for target.
@@ -680,7 +723,7 @@ zero/CMakeFiles/zero_generate_messages_lisp.dir/all: zero/CMakeFiles/std_msgs_ge
 zero/CMakeFiles/zero_generate_messages_lisp.dir/all: zero/CMakeFiles/_zero_generate_messages_check_deps_height.dir/all
 	$(MAKE) -f zero/CMakeFiles/zero_generate_messages_lisp.dir/build.make zero/CMakeFiles/zero_generate_messages_lisp.dir/depend
 	$(MAKE) -f zero/CMakeFiles/zero_generate_messages_lisp.dir/build.make zero/CMakeFiles/zero_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/rosLearn/build/CMakeFiles --progress-num=20,21 "Built target zero_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/rosLearn/build/CMakeFiles --progress-num=22,23 "Built target zero_generate_messages_lisp"
 .PHONY : zero/CMakeFiles/zero_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -817,7 +860,7 @@ zero/CMakeFiles/zero_generate_messages_cpp.dir/all: zero/CMakeFiles/_zero_genera
 zero/CMakeFiles/zero_generate_messages_cpp.dir/all: zero/CMakeFiles/_zero_generate_messages_check_deps_height.dir/all
 	$(MAKE) -f zero/CMakeFiles/zero_generate_messages_cpp.dir/build.make zero/CMakeFiles/zero_generate_messages_cpp.dir/depend
 	$(MAKE) -f zero/CMakeFiles/zero_generate_messages_cpp.dir/build.make zero/CMakeFiles/zero_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/rosLearn/build/CMakeFiles --progress-num=15,16 "Built target zero_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/rosLearn/build/CMakeFiles --progress-num=17,18 "Built target zero_generate_messages_cpp"
 .PHONY : zero/CMakeFiles/zero_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -873,7 +916,7 @@ zero/CMakeFiles/zero_generate_messages_eus.dir/all: zero/CMakeFiles/_zero_genera
 zero/CMakeFiles/zero_generate_messages_eus.dir/all: zero/CMakeFiles/_zero_generate_messages_check_deps_height.dir/all
 	$(MAKE) -f zero/CMakeFiles/zero_generate_messages_eus.dir/build.make zero/CMakeFiles/zero_generate_messages_eus.dir/depend
 	$(MAKE) -f zero/CMakeFiles/zero_generate_messages_eus.dir/build.make zero/CMakeFiles/zero_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/rosLearn/build/CMakeFiles --progress-num=17,18,19 "Built target zero_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/rosLearn/build/CMakeFiles --progress-num=19,20,21 "Built target zero_generate_messages_eus"
 .PHONY : zero/CMakeFiles/zero_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1203,7 +1246,7 @@ zero/CMakeFiles/zero_generate_messages_nodejs.dir/all: zero/CMakeFiles/_zero_gen
 zero/CMakeFiles/zero_generate_messages_nodejs.dir/all: zero/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
 	$(MAKE) -f zero/CMakeFiles/zero_generate_messages_nodejs.dir/build.make zero/CMakeFiles/zero_generate_messages_nodejs.dir/depend
 	$(MAKE) -f zero/CMakeFiles/zero_generate_messages_nodejs.dir/build.make zero/CMakeFiles/zero_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/rosLearn/build/CMakeFiles --progress-num=22,23 "Built target zero_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/rosLearn/build/CMakeFiles --progress-num=24,25 "Built target zero_generate_messages_nodejs"
 .PHONY : zero/CMakeFiles/zero_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1259,7 +1302,7 @@ zero/CMakeFiles/zero_generate_messages_py.dir/all: zero/CMakeFiles/_zero_generat
 zero/CMakeFiles/zero_generate_messages_py.dir/all: zero/CMakeFiles/std_msgs_generate_messages_py.dir/all
 	$(MAKE) -f zero/CMakeFiles/zero_generate_messages_py.dir/build.make zero/CMakeFiles/zero_generate_messages_py.dir/depend
 	$(MAKE) -f zero/CMakeFiles/zero_generate_messages_py.dir/build.make zero/CMakeFiles/zero_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/rosLearn/build/CMakeFiles --progress-num=24,25,26,27 "Built target zero_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/rosLearn/build/CMakeFiles --progress-num=26,27,28,29 "Built target zero_generate_messages_py"
 .PHONY : zero/CMakeFiles/zero_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1300,7 +1343,7 @@ zero/CMakeFiles/node_pub.dir/all: zero/CMakeFiles/roscpp_generate_messages_py.di
 zero/CMakeFiles/node_pub.dir/all: zero/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
 	$(MAKE) -f zero/CMakeFiles/node_pub.dir/build.make zero/CMakeFiles/node_pub.dir/depend
 	$(MAKE) -f zero/CMakeFiles/node_pub.dir/build.make zero/CMakeFiles/node_pub.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/rosLearn/build/CMakeFiles --progress-num=9,10 "Built target node_pub"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/rosLearn/build/CMakeFiles --progress-num=11,12 "Built target node_pub"
 .PHONY : zero/CMakeFiles/node_pub.dir/all
 
 # Build rule for subdir invocation for target.

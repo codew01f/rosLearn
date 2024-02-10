@@ -136,6 +136,7 @@ include_directories(
  add_executable(node_pub src/node_pub.cpp)
  add_executable(node_sub src/node_sub.cpp)
  add_executable(node_srv src/node_srv.cpp)
+ add_executable(node_cln src/node_cln.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -148,6 +149,7 @@ include_directories(
  add_dependencies(node_pub ${node_pub_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
  add_dependencies(node_sub ${node_sub_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
  add_dependencies(node_srv ${node_srv_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+ add_dependencies(node_cln ${node_cln_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
  target_link_libraries(node_pub
@@ -157,6 +159,9 @@ include_directories(
    ${catkin_LIBRARIES}
  )
  target_link_libraries(node_srv
+   ${catkin_LIBRARIES}
+ )
+ target_link_libraries(node_cln
    ${catkin_LIBRARIES}
  )
 

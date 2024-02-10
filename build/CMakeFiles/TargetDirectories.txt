@@ -38,6 +38,7 @@
 /home/robot/rosLearn/build/zero/CMakeFiles/install/strip.dir
 /home/robot/rosLearn/build/zero/CMakeFiles/install.dir
 /home/robot/rosLearn/build/zero/CMakeFiles/edit_cache.dir
+/home/robot/rosLearn/build/zero/CMakeFiles/node_cln.dir
 /home/robot/rosLearn/build/zero/CMakeFiles/node_srv.dir
 /home/robot/rosLearn/build/zero/CMakeFiles/node_sub.dir
 /home/robot/rosLearn/build/zero/CMakeFiles/rosgraph_msgs_generate_messages_py.dir

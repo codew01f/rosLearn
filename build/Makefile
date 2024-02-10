@@ -285,6 +285,19 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named node_cln
+
+# Build rule for target.
+node_cln: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_cln
+.PHONY : node_cln
+
+# fast build rule for target.
+node_cln/fast:
+	$(MAKE) -f zero/CMakeFiles/node_cln.dir/build.make zero/CMakeFiles/node_cln.dir/build
+.PHONY : node_cln/fast
+
+#=============================================================================
 # Target rules for targets named node_srv
 
 # Build rule for target.
@@ -709,6 +722,7 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... node_cln"
 	@echo "... node_srv"
 	@echo "... node_sub"
 	@echo "... rosgraph_msgs_generate_messages_py"
