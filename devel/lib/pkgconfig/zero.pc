@@ -1,0 +1,8 @@
+prefix=/home/robot/rosLearn/devel
+
+Name: zero
+Description: Description of zero
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

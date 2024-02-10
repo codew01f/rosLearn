@@ -1,0 +1,2 @@
+zero
+-DCATKIN_DEVEL_PREFIX=/home/robot/rosLearn/devel -DCMAKE_INSTALL_PREFIX=/home/robot/rosLearn/install -G Unix Makefiles
