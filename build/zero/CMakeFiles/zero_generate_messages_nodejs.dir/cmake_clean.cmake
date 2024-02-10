@@ -1,3 +1,7 @@
+file(REMOVE_RECURSE
+  "/home/robot/rosLearn/devel/share/gennodejs/ros/zero/msg/location.js"
+  "CMakeFiles/zero_generate_messages_nodejs"
+)
 
 # Per-language clean rules from dependency scanning.
 foreach(lang )

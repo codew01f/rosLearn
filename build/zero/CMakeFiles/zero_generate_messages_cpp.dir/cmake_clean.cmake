@@ -1,3 +1,7 @@
+file(REMOVE_RECURSE
+  "/home/robot/rosLearn/devel/include/zero/location.h"
+  "CMakeFiles/zero_generate_messages_cpp"
+)
 
 # Per-language clean rules from dependency scanning.
 foreach(lang )

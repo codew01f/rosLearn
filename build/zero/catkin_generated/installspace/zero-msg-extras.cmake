@@ -1,2 +1,2 @@
-set(zero_MESSAGE_FILES "")
+set(zero_MESSAGE_FILES "msg/location.msg")
 set(zero_SERVICE_FILES "")

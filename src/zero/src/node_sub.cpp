@@ -1,8 +1,8 @@
 #include "ros/ros.h"
-#include "std_msgs/String.h"
+#include "zero/location.h"
 
-void callback_t0(const std_msgs::String::ConstPtr &msg){
-  ROS_INFO("recieved: %s", msg->data.c_str());
+void callback_t0(const zero::location &loc){
+  ROS_INFO("recieved: (%d, %d, %d)", loc.xx, loc.yy, loc.zz);
 }
 
 int main(int argc, char** argv){

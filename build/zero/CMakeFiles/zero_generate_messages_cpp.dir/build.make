@@ -53,6 +53,17 @@ CMAKE_BINARY_DIR = /home/robot/rosLearn/build
 # Include the progress variables for this target.
 include zero/CMakeFiles/zero_generate_messages_cpp.dir/progress.make
 
+zero/CMakeFiles/zero_generate_messages_cpp: /home/robot/rosLearn/devel/include/zero/location.h
+
+
+/home/robot/rosLearn/devel/include/zero/location.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/robot/rosLearn/devel/include/zero/location.h: /home/robot/rosLearn/src/zero/msg/location.msg
+/home/robot/rosLearn/devel/include/zero/location.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/rosLearn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from zero/location.msg"
+	cd /home/robot/rosLearn/src/zero && /home/robot/rosLearn/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/robot/rosLearn/src/zero/msg/location.msg -Izero:/home/robot/rosLearn/src/zero/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p zero -o /home/robot/rosLearn/devel/include/zero -e /opt/ros/noetic/share/gencpp/cmake/..
+
+zero_generate_messages_cpp: zero/CMakeFiles/zero_generate_messages_cpp
+zero_generate_messages_cpp: /home/robot/rosLearn/devel/include/zero/location.h
 zero_generate_messages_cpp: zero/CMakeFiles/zero_generate_messages_cpp.dir/build.make
 
 .PHONY : zero_generate_messages_cpp

@@ -91,6 +91,17 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -123,17 +134,6 @@ list_install_components:
 list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -228,6 +228,21 @@ std_msgs_generate_messages_cpp/fast:
 .PHONY : std_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
+zero/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
+	cd /home/robot/rosLearn/build && $(MAKE) -f CMakeFiles/Makefile2 zero/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+.PHONY : zero/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_cpp: zero/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	cd /home/robot/rosLearn/build && $(MAKE) -f zero/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make zero/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
 zero/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
 	cd /home/robot/rosLearn/build && $(MAKE) -f CMakeFiles/Makefile2 zero/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 .PHONY : zero/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
@@ -286,6 +301,21 @@ zero_gennodejs: zero/CMakeFiles/zero_gennodejs.dir/rule
 zero_gennodejs/fast:
 	cd /home/robot/rosLearn/build && $(MAKE) -f zero/CMakeFiles/zero_gennodejs.dir/build.make zero/CMakeFiles/zero_gennodejs.dir/build
 .PHONY : zero_gennodejs/fast
+
+# Convenience name for target.
+zero/CMakeFiles/_zero_generate_messages_check_deps_location.dir/rule:
+	cd /home/robot/rosLearn/build && $(MAKE) -f CMakeFiles/Makefile2 zero/CMakeFiles/_zero_generate_messages_check_deps_location.dir/rule
+.PHONY : zero/CMakeFiles/_zero_generate_messages_check_deps_location.dir/rule
+
+# Convenience name for target.
+_zero_generate_messages_check_deps_location: zero/CMakeFiles/_zero_generate_messages_check_deps_location.dir/rule
+
+.PHONY : _zero_generate_messages_check_deps_location
+
+# fast build rule for target.
+_zero_generate_messages_check_deps_location/fast:
+	cd /home/robot/rosLearn/build && $(MAKE) -f zero/CMakeFiles/_zero_generate_messages_check_deps_location.dir/build.make zero/CMakeFiles/_zero_generate_messages_check_deps_location.dir/build
+.PHONY : _zero_generate_messages_check_deps_location/fast
 
 # Convenience name for target.
 zero/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
@@ -572,21 +602,6 @@ node_pub/fast:
 	cd /home/robot/rosLearn/build && $(MAKE) -f zero/CMakeFiles/node_pub.dir/build.make zero/CMakeFiles/node_pub.dir/build
 .PHONY : node_pub/fast
 
-# Convenience name for target.
-zero/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/robot/rosLearn/build && $(MAKE) -f CMakeFiles/Makefile2 zero/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : zero/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: zero/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/robot/rosLearn/build && $(MAKE) -f zero/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make zero/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
 src/node_pub.o: src/node_pub.cpp.o
 
 .PHONY : src/node_pub.o
@@ -654,10 +669,13 @@ help:
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... test"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... zero_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... zero_gennodejs"
+	@echo "... _zero_generate_messages_check_deps_location"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... zero_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
@@ -680,8 +698,6 @@ help:
 	@echo "... zero_genlisp"
 	@echo "... zero_generate_messages_py"
 	@echo "... node_pub"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... test"
 	@echo "... src/node_pub.o"
 	@echo "... src/node_pub.i"
 	@echo "... src/node_pub.s"

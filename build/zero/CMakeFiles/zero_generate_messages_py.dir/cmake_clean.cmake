@@ -1,3 +1,8 @@
+file(REMOVE_RECURSE
+  "/home/robot/rosLearn/devel/lib/python3/dist-packages/zero/msg/__init__.py"
+  "/home/robot/rosLearn/devel/lib/python3/dist-packages/zero/msg/_location.py"
+  "CMakeFiles/zero_generate_messages_py"
+)
 
 # Per-language clean rules from dependency scanning.
 foreach(lang )

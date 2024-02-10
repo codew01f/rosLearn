@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "/home/robot/rosLearn/devel/share/roseus/ros/zero/manifest.l"
+  "/home/robot/rosLearn/devel/share/roseus/ros/zero/msg/location.l"
   "CMakeFiles/zero_generate_messages_eus"
 )
 

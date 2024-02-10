@@ -3,6 +3,6 @@ prefix=/home/robot/rosLearn/devel
 Name: zero
 Description: Description of zero
 Version: 0.0.0
-Cflags: 
+Cflags: -I/home/robot/rosLearn/devel/include
 Libs: -L${prefix}/lib 
 Requires: 

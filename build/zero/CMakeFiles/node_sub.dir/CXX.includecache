@@ -6,11 +6,27 @@
 
 #IncludeRegexTransform: 
 
+/home/robot/rosLearn/devel/include/zero/location.h
+string
+-
+vector
+-
+memory
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
 /home/robot/rosLearn/src/zero/src/node_sub.cpp
 ros/ros.h
 /home/robot/rosLearn/src/zero/src/ros/ros.h
-std_msgs/String.h
-/home/robot/rosLearn/src/zero/src/std_msgs/String.h
+zero/location.h
+/home/robot/rosLearn/src/zero/src/zero/location.h
 
 /opt/ros/noetic/include/ros/advertise_options.h
 ros/forwards.h
@@ -661,22 +677,6 @@ ros/forwards.h
 /opt/ros/noetic/include/ros/ros/forwards.h
 
 /opt/ros/noetic/include/rosconsole/macros_generated.h
-
-/opt/ros/noetic/include/std_msgs/String.h
-string
--
-vector
--
-memory
--
-ros/types.h
--
-ros/serialization.h
--
-ros/builtin_message_traits.h
--
-ros/message_operations.h
--
 
 /opt/ros/noetic/include/xmlrpcpp/XmlRpcDecl.h
 ros/macros.h
