@@ -80,6 +80,17 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -123,17 +134,6 @@ test:
 test/fast: test
 
 .PHONY : test/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -361,6 +361,21 @@ roscpp_generate_messages_eus: zero/CMakeFiles/roscpp_generate_messages_eus.dir/r
 roscpp_generate_messages_eus/fast:
 	cd /home/robot/rosLearn/build && $(MAKE) -f zero/CMakeFiles/roscpp_generate_messages_eus.dir/build.make zero/CMakeFiles/roscpp_generate_messages_eus.dir/build
 .PHONY : roscpp_generate_messages_eus/fast
+
+# Convenience name for target.
+zero/CMakeFiles/node_sub.dir/rule:
+	cd /home/robot/rosLearn/build && $(MAKE) -f CMakeFiles/Makefile2 zero/CMakeFiles/node_sub.dir/rule
+.PHONY : zero/CMakeFiles/node_sub.dir/rule
+
+# Convenience name for target.
+node_sub: zero/CMakeFiles/node_sub.dir/rule
+
+.PHONY : node_sub
+
+# fast build rule for target.
+node_sub/fast:
+	cd /home/robot/rosLearn/build && $(MAKE) -f zero/CMakeFiles/node_sub.dir/build.make zero/CMakeFiles/node_sub.dir/build
+.PHONY : node_sub/fast
 
 # Convenience name for target.
 zero/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
@@ -599,6 +614,33 @@ src/node_pub.cpp.s:
 	cd /home/robot/rosLearn/build && $(MAKE) -f zero/CMakeFiles/node_pub.dir/build.make zero/CMakeFiles/node_pub.dir/src/node_pub.cpp.s
 .PHONY : src/node_pub.cpp.s
 
+src/node_sub.o: src/node_sub.cpp.o
+
+.PHONY : src/node_sub.o
+
+# target to build an object file
+src/node_sub.cpp.o:
+	cd /home/robot/rosLearn/build && $(MAKE) -f zero/CMakeFiles/node_sub.dir/build.make zero/CMakeFiles/node_sub.dir/src/node_sub.cpp.o
+.PHONY : src/node_sub.cpp.o
+
+src/node_sub.i: src/node_sub.cpp.i
+
+.PHONY : src/node_sub.i
+
+# target to preprocess a source file
+src/node_sub.cpp.i:
+	cd /home/robot/rosLearn/build && $(MAKE) -f zero/CMakeFiles/node_sub.dir/build.make zero/CMakeFiles/node_sub.dir/src/node_sub.cpp.i
+.PHONY : src/node_sub.cpp.i
+
+src/node_sub.s: src/node_sub.cpp.s
+
+.PHONY : src/node_sub.s
+
+# target to generate assembly for a file
+src/node_sub.cpp.s:
+	cd /home/robot/rosLearn/build && $(MAKE) -f zero/CMakeFiles/node_sub.dir/build.make zero/CMakeFiles/node_sub.dir/src/node_sub.cpp.s
+.PHONY : src/node_sub.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -607,6 +649,7 @@ help:
 	@echo "... depend"
 	@echo "... install/strip"
 	@echo "... install"
+	@echo "... edit_cache"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
@@ -621,6 +664,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... zero_generate_messages_eus"
 	@echo "... roscpp_generate_messages_eus"
+	@echo "... node_sub"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... zero_genpy"
@@ -638,10 +682,12 @@ help:
 	@echo "... node_pub"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... test"
-	@echo "... edit_cache"
 	@echo "... src/node_pub.o"
 	@echo "... src/node_pub.i"
 	@echo "... src/node_pub.s"
+	@echo "... src/node_sub.o"
+	@echo "... src/node_sub.i"
+	@echo "... src/node_sub.s"
 .PHONY : help
 
 

@@ -454,6 +454,19 @@ roscpp_generate_messages_eus/fast:
 .PHONY : roscpp_generate_messages_eus/fast
 
 #=============================================================================
+# Target rules for targets named node_sub
+
+# Build rule for target.
+node_sub: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node_sub
+.PHONY : node_sub
+
+# fast build rule for target.
+node_sub/fast:
+	$(MAKE) -f zero/CMakeFiles/node_sub.dir/build.make zero/CMakeFiles/node_sub.dir/build
+.PHONY : node_sub/fast
+
+#=============================================================================
 # Target rules for targets named roscpp_generate_messages_cpp
 
 # Build rule for target.
@@ -670,6 +683,7 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... zero_generate_messages_eus"
 	@echo "... roscpp_generate_messages_eus"
+	@echo "... node_sub"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... zero_genpy"
